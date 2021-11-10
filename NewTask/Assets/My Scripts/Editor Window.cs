@@ -4,9 +4,9 @@ using UnityEditor;
 public class MyWindow : EditorWindow
 {
     GameObject NewObject = null;
-    public int xStep;
-    public int yStep;
-    public int zStep;  // Step
+    public float xStep;
+    public float yStep;
+    public float zStep;  // Step
     static int xCopies;
     static int yCopies;
     static int zCopies; // Number of copies
@@ -27,9 +27,9 @@ public class MyWindow : EditorWindow
         xCopies = EditorGUILayout.IntField("Number of copies on X axis", xCopies);
         yCopies = EditorGUILayout.IntField("Number of copies on Y axis", yCopies);
         zCopies = EditorGUILayout.IntField("Number of copies on Z axis", zCopies);
-        xStep = EditorGUILayout.IntField("X Step", xStep);
-        yStep = EditorGUILayout.IntField("Y Step", yStep);
-        zStep = EditorGUILayout.IntField("Z Step", zStep);
+        xStep = EditorGUILayout.FloatField("X Step", xStep);
+        yStep = EditorGUILayout.FloatField("Y Step", yStep);
+        zStep = EditorGUILayout.FloatField("Z Step", zStep);
 
 
         if (GUILayout.Button("Apply"))
